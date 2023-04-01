@@ -4,6 +4,7 @@ import mock2 from "../img/mock2.png"
 import mock3 from "../img/mock3.png"
 import mock4 from "../img/mock4.png"
 import mock5 from "../img/mock5.png"
+import manchester from "../img/manchester.png"
 
 /* Hi there! Thanks for checking out my portfolio template. Be sure to read the comments to get a better understanding of
 how to make this template work best for you! */
@@ -23,59 +24,49 @@ of what each of the values mean.
  */
 
 export const info = {
-    firstName: "John",
-    lastName: "Smith",
-    initials: "js", // the example uses first and last, but feel free to use three or more if you like.
+    firstName: "Vignesh",
+    lastName: "Selvaraj",
+    initials: "S.V", // the example uses first and last, but feel free to use three or more if you like.
     position: "a Full Stack Developer",
     selfPortrait: self, // don't change this unless you want to name your self-portrait in the "img" folder something else!
     gradient: `-webkit-linear-gradient(135deg, ${colors})`, // don't change this either
     baseColor: colors[0],
-    miniBio: [ // these are just some "tidbits" about yourself. You can look at mine https://paytonjewell.github.io/#/ for an example if you'd like
-        {
-            emoji: '☕',
-            text: 'fueled by coffee'
-        },
+    miniBio: [ // these are the little bullet points on the homepage
+
         {
             emoji: '🌎',
-            text: 'based in the US'
+            text: 'Based in Los Angeles'
         },
         {
             emoji: "💼",
-            text: "Systems Engineer at Google"
+            text: "CS Grad Student at University of Southern California (USC). Expected Grad: Dec 2023"
         },
         {
             emoji: "📧",
-            text: "johnsmith@gmail.com"
+            text: "vs96005@usc.edu"
         }
     ],
     socials: [
         {
-            link: "https://facebook.com",
+            link: "https://https://www.facebook.com/vignesh.selvaraj.31/.com",
             icon: 'fa fa-facebook',
             label: 'facebook'
         },
         {
-            link: "https://instagram.com",
+            link: "https://www.instagram.com/viggyy_s/",
             icon: 'fa fa-instagram',
             label: 'instagram'
         },
         {
-            link: "https://github.com",
+            link: "https://github.com/VigneshSelvaraj96",
             icon: "fa fa-github",
             label: 'github'
         },
         {
-            link: "https://linkedin.com",
+            link: "https://www.linkedin.com/in/vignesh-selvaraj96/",
             icon: "fa fa-linkedin",
             label: 'linkedin'
         },
-        {
-            link: "https://twitter.com",
-            icon: "fa fa-twitter",
-            label: 'twitter'
-        }
-// Feel free to remove any of these that you don't have. I'll write an FAQ on how to add new ones later, let me know if you have a request for an icon!
-// Just change the links so that they lead to your social profiles.
 
     ],
     bio: "Hello! I'm John. I'm a systems engineer for Google. I studied CompSci at Harvard, I enjoy long walks on the beach, and I believe artificial intelligence will inevitably rule us all one day. You should hire me!",
