@@ -8,6 +8,7 @@ import {Box} from "@mui/material";
 import {info} from "../../info/Info";
 import {useState, useEffect} from 'react';
 import manchester from '../../img/manchester.png';
+import Nasapic from './nasapic';
 
 
 
@@ -28,27 +29,39 @@ const LosAngelesTime = new Date(time.toLocaleString('en-US', { timeZone: 'Americ
 
 const myImageStyle = { width: '35px', height: '35px', objectFit: 'cover', verticalAlign: 'text-top'};
 
+
    return (
-      <><Box component={'main'} display={'flex'} flexDirection={{ xs: 'column', md: 'row' }} alignItems={'center'}
-         justifyContent={'center'} minHeight={'calc(100vh - 175px)'}>
-         <Box className={classNames(Style.avatar, Style.shadowed)} alt={'image of developer'} style={{ background: info.gradient }} component={'img'} src={me} width={{ xs: '35vh', md: '40vh' }}
-            height={{ xs: '35vh', md: '40vh' }}
-            borderRadius={'50%'} p={'0.75rem'} mb={{ xs: '1rem', sm: 0 }} mr={{ xs: 0, md: '2rem' }} />
-         <Box>
-            <h1>Hi, I'm <span style={{ background: info.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{info.firstName}</span><span className={Style.ball}>⚽</span>
-            </h1>
-            <h2>I'm {info.position} and an avid <img src={manchester} style={myImageStyle} ></img> Fan</h2>
-            <Box component={'ul'} p={'0.8rem'}>
-               {info.miniBio.map((bio, index) => (
-                  <EmojiBullet key={index} emoji={bio.emoji} text={bio.text} />
-               ))}
-               <EmojiBullet emoji={'⏰'} text={`The current time for me is: ${LosAngelesTime}`} />
+      <>
+         <Box component={'main'} display={'flex'} flexDirection={{ xs: 'column', md: 'row' }} alignItems={'center'}
+            justifyContent={'center'} minHeight={'calc(100vh - 175px)'}>
+            <Box className={classNames(Style.avatar, Style.shadowed)} alt={'image of developer'} style={{ background: info.gradient }} component={'img'} src={me} width={{ xs: '35vh', md: '40vh' }}
+               height={{ xs: '35vh', md: '40vh' }}
+               borderRadius={'50%'} p={'0.75rem'} mb={{ xs: '1rem', sm: 0 }} mr={{ xs: 0, md: '2rem' }} />
+            <Box>
+               <h1>Hi, I'm <span style={{ background: info.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{info.firstName}</span><span className={Style.ball}>⚽</span><span className={Style.man}>🏃</span>
+               </h1>
+               <h2>I'm {info.position} and an avid <img src={manchester} style={myImageStyle} ></img> Fan</h2>
+               <Box component={'ul'} p={'0.8rem'}>
+                  {info.miniBio.map((bio, index) => (
+                     <EmojiBullet key={index} emoji={bio.emoji} text={bio.text} />
+                  ))}
+                  <EmojiBullet emoji={'⏰'} text={`The current time for me is: ${LosAngelesTime}`} />
+               </Box>
             </Box>
          </Box>
-      </Box><Box display={'flex'} gap={'1.5rem'} justifyContent={'center'} fontSize={{ xs: '2rem', md: '2.5rem' }}>
+         <Box component={'section'} display={'flex'} flexDirection={{ xs: 'column', md: 'row' }} alignItems={'center'}
+            justifyContent={'center'} p={'1rem'} fontSize={{ xs: '1.5rem', md: '2rem' }}>
+               <h6>As a Space Nerd, I'm obliged to show you a random Nasa Picture of the day everyday!</h6>
+               </Box>
+         <Box display={'flex'} flexDirection={'column'} alignItems={'center'}
+            justifyContent={'center'} p={'1rem'} fontSize={{ xs: '1.5rem', md: '2rem' }}>
+               <Nasapic></Nasapic>
+               </Box>
+         <Box display={'flex'} gap={'1.5rem'} justifyContent={'center'} fontSize={{ xs: '2rem', md: '2.5rem' }}>
             {info.socials.map((social, index) => (
                <SocialIcon key={index} link={social.link} icon={social.icon} label={social.label} />
             ))}
-         </Box></>
+         </Box>
+      </>
    )
 }

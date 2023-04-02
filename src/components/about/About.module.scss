@@ -8,14 +8,11 @@
   color: $green;
 }
 
-.skills {
-  columns: 1;
-  @media only screen and (min-width: 940px) {
-    columns: 2;
-  }
-
-  li {
-    margin: 0;
-    line-height: 1.75;
-  }
+.parentcontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+  position: relative;
 }

@@ -19,12 +19,37 @@ h2 {
 }
 
 
+.man {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin-left: 5%;
+  animation-name: walk;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes walk {
+  0% {
+    margin-left: 10%;
+  }
+  50% {
+    margin-left: 5%;
+  }
+  100% {
+    margin-left: 10%;
+  }
+}
+
+
 .ball {
-  animation-name: rotate;
-  animation-duration: 2.5s;
+  animation-name: roll;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   transform-origin: center;
+  transform: rotate(0);
+  left: 0;
   display: inline-block;
+  position: relative;
 }
 
 a {
@@ -37,13 +62,37 @@ a:hover {
   transition: color 200ms ease;
 }
 
-@keyframes rotate {
-  0% { transform: rotate( 0.0deg) }
-  10% { transform: rotate(14.0deg) }
-  20% { transform: rotate(-8.0deg) }
-  30% { transform: rotate(14.0deg) }
-  40% { transform: rotate(-4.0deg) }
-  50% { transform: rotate(10.0deg) }
-  60% { transform: rotate( 0.0deg) }
-  100% { transform: rotate( 0.0deg) }
+@keyframes roll {
+0%{
+  transform: rotate(0);
+  left: 0;
+  transition: ease-in-out;
+}
+50%{
+  transform: rotate(360deg);
+  left: 8%;
+  transition: ease-in-out;
+}
+100%{
+  transform: rotate(0);
+  left: 0;
+  transition: ease-in-out;
+}
+}
+
+
+.nasapic {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+object-fit: contain;
+width: 50%;
+height: 50%;
+}
+
+.nasapicdes{
+  font-size: 1rem;
+  padding-top: 2%;
+  padding-bottom: 5%;
 }
