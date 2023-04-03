@@ -5,8 +5,20 @@ import {Box} from "@mui/material";
 import { Document, Page, pdfjs } from 'react-pdf';
 import { useState, useEffect } from 'react';
 import "react-pdf/dist/esm/Page/AnnotationLayer.css"
+import DownloadSharpIcon from '@mui/icons-material/DownloadSharp';
+import Button from '@mui/material/Button';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { blueGrey } from '@mui/material/colors';
 
 
+
+const theme = createTheme({
+    palette: {
+      myCustomBlue: {
+        main: '#27C93F'
+      }
+    }
+  });
 
 export default function About() {
 
@@ -32,9 +44,13 @@ export default function About() {
                 >
                     <Page pageNumber={pageNumber} renderTextLayer={false}/>
                 </Document>
-                <p>
-                    Page {pageNumber} of {numPages}
-                </p>
+                <ThemeProvider theme={theme}>
+                <a href="USC Resume.pdf" download>
+                    <Button variant="contained" color='myCustomBlue' startIcon={<DownloadSharpIcon />} className={Style.downloadbtn}>
+                        Download
+                    </Button>
+                </a>
+                </ThemeProvider>
             </div>
         );
         }

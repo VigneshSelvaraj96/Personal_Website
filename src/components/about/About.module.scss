@@ -1,4 +1,5 @@
 @import "../../variables.modules";
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text&family=Open+Sans:wght@300&display=swap');
 
 .pink {
   color: $pink;
@@ -15,4 +16,14 @@
   justify-content: center;
   object-fit: contain;
   position: relative;
+}
+
+
+.downloadbtn{
+  display: flex;
+  align-self: end;
+  margin-top: 4vh;
+  color: black;
+  font-size: 22px;
+  font-family: 'Markazi Text', serif;
 }
