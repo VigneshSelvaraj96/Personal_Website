@@ -44,6 +44,10 @@ export const info = {
         {
             emoji: "📧",
             text: "vs96005@usc.edu"
+        },
+        {
+            emoji: "🚀",
+            text: "Since I love Space, scroll down to see Nasa's Astronomy Picture of the Day (Refreshed everyday)"
         }
     ],
     socials: [

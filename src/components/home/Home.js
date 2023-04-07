@@ -42,21 +42,21 @@ const myImageStyle = { width: '35px', height: '35px', objectFit: 'cover', vertic
                </h1>
                <h2>I'm {info.position} and an avid <img src={manchester} style={myImageStyle} ></img> Fan</h2>
                <Box component={'ul'} p={'0.8rem'}>
+               <EmojiBullet emoji={'⏰'} text={`The current time for me is: ${LosAngelesTime}`} />
                   {info.miniBio.map((bio, index) => (
                      <EmojiBullet key={index} emoji={bio.emoji} text={bio.text} />
                   ))}
-                  <EmojiBullet emoji={'⏰'} text={`The current time for me is: ${LosAngelesTime}`} />
                </Box>
             </Box>
          </Box>
-         <Box component={'section'} display={'flex'} flexDirection={{ xs: 'column', md: 'row' }} alignItems={'center'}
-            justifyContent={'center'} p={'1rem'} fontSize={{ xs: '1.5rem', md: '2rem' }}>
-               <h6>As a Space Nerd, I'm obliged to show you a random Nasa Picture of the day everyday!</h6>
-               </Box>
-         <Box display={'flex'} flexDirection={'column'} alignItems={'center'}
-            justifyContent={'center'} p={'1rem'} fontSize={{ xs: '1.5rem', md: '2rem' }}>
-               <Nasapic></Nasapic>
-               </Box>
+         <div className='container-fluid'>
+            <div className='row'>
+               <div className='col-10 mx-auto'>
+                  <Nasapic>
+                  </Nasapic>
+               </div>
+            </div>
+         </div>
          <Box display={'flex'} gap={'1.5rem'} justifyContent={'center'} fontSize={{ xs: '2rem', md: '2.5rem' }}>
             {info.socials.map((social, index) => (
                <SocialIcon key={index} link={social.link} icon={social.icon} label={social.label} />

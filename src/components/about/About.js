@@ -8,14 +8,13 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css"
 import DownloadSharpIcon from '@mui/icons-material/DownloadSharp';
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { blueGrey } from '@mui/material/colors';
 
 
 
 const theme = createTheme({
     palette: {
       myCustomBlue: {
-        main: '#27C93F'
+        main: '#27C93F',
       }
     }
   });

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Style from './Home.module.scss';
+import Terminal from "../about/Terminal";
+import { Box } from "@mui/material";
 
 function Nasapic() {
   const [nasaPic, setNasaPic] = useState({});
@@ -12,12 +14,36 @@ function Nasapic() {
       .catch((error) => console.log(error));
   }, []);
 
+
+  function nasapictitleandtext() {
+    return (
+      <>
+        <div className="container">
+          <div className="row">
+            <div className="col-6 mx-auto mb-2">
+              <Box color='black' className={Style.nasapictitle}>{nasaPic.title}
+              </Box >
+            </div>
+          </div>
+          <div className="row d-flex align-items-center">
+            <div className="col-sm-6">
+              <img src={nasaPic.url} alt={nasaPic.title} className={Style.nasapic} />
+            </div >
+            <div className="col-sm-6 text-center">
+              <div className={Style.nasapicdes}>{nasaPic.explanation}
+              </div>
+            </div>
+          </div >
+        </div>
+      </>
+    );
+  }
+
   return (
-    <div className={Style.nasapic}>
-      <h5 style={{paddingBottom:20}}>{nasaPic.title}</h5>
-      <img src={nasaPic.url} alt={nasaPic.title} />
-      <div className={Style.nasapicdes}>{nasaPic.explanation}</div >
-    </div>
+    <>
+          <Terminal text={nasapictitleandtext()}>
+          </Terminal>
+    </>
   );
 }
 
