@@ -15,6 +15,7 @@ const theme = createTheme({
     palette: {
       myCustomBlue: {
         main: '#27C93F',
+        contrastText: 'black',
       }
     }
   });
@@ -45,9 +46,11 @@ export default function About() {
                 </Document>
                 <ThemeProvider theme={theme}>
                 <a href="USC Resume.pdf" download>
-                    <Button variant="contained" color='myCustomBlue' startIcon={<DownloadSharpIcon />} className={Style.downloadbtn}>
-                        Download
-                    </Button>
+                    <Box sx={{mt:3}}>
+                        <Button variant="contained" color='myCustomBlue' startIcon={<DownloadSharpIcon />}>
+                            Download
+                        </Button>
+                    </Box>
                 </a>
                 </ThemeProvider>
             </div>

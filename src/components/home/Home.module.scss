@@ -87,13 +87,15 @@ a:hover {
   width: 700px;
   height: 700px;
   object-fit: cover;
+  border-radius: 15px;
+  border: #46ff62 0.2rem solid;
 }
 
 
 
 .nasapictitle{
   background-color: #27C93F;
-  margin-bottom: 2%;
+  margin-bottom: 3rem;
   padding: 1.5%;
   text-align: center;
   font-weight: bold;
