@@ -6,13 +6,13 @@ import About from "./about/About";
 import Portfolio from "./portfolio/Portfolio";
 import {Route, Routes} from "react-router-dom";
 import {Box, Grid} from "@mui/material";
+import VisitPage from './visit_stats/visit_page';
 
 export default function BaseLayout() {
    let [darkMode, setDarkMode] = useState(true);
 
    function handleToggleDarkMode() {
-      let oppositeOfCurrentDarkMode = !darkMode
-      console.log(oppositeOfCurrentDarkMode)
+      let oppositeOfCurrentDarkMode = !darkMode;
       localStorage.setItem('darkMode', `${oppositeOfCurrentDarkMode}`)
       setDarkMode(oppositeOfCurrentDarkMode)
    }
@@ -39,6 +39,7 @@ export default function BaseLayout() {
                   <Route exact path={'/'} element={<Home/>}/>
                   <Route exact path={'/about'} element={<About/>}/>
                   <Route exact path={'/portfolio'} element={<Portfolio/>}/>
+                  <Route exact path={'/visit'} element={<VisitPage/>}/>
                </Routes>
             </Grid>
             <Grid item>

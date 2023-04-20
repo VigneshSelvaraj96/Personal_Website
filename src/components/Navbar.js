@@ -23,6 +23,11 @@ const links = [
         active: 'home'
     },
     {
+        name: 'Stats',
+        to: '/visit',
+        active: 'visit'
+    },
+    {
         name: 'Portfolio',
         to: '/portfolio',
         active: 'portfolio'
