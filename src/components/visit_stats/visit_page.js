@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import L, { map } from "leaflet";
+import L from "leaflet";
 import { useState, useRef } from "react";
 import "leaflet/dist/leaflet.css";
 
@@ -25,7 +25,7 @@ export default function VisitPage() {
     useEffect(() => {
         fetch('https://ipapi.co/region_code/')
             .then(res => res.text())
-            .then(state => fetch(`https://sxrwu24kff6ogd3el72jtozljm0wsccb.lambda-url.us-east-2.on.aws/?state=${state}`))
+            .then(state =>  fetch(`https://sxrwu24kff6ogd3el72jtozljm0wsccb.lambda-url.us-east-2.on.aws/?state=${state}`))
             .then(res => res.json())
             .then(data => { setData(data); return data; })
             .then((data) => { setTotalvisits(getTotalvisits(data));})
