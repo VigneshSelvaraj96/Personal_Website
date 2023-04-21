@@ -40,7 +40,7 @@ const myImageStyle = { width: '35px', height: '35px', objectFit: 'cover', vertic
             <Box>
                <h1>Hi, I'm <span style={{ background: info.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{info.firstName}</span><span className={Style.ball}>⚽</span><span className={Style.man}>🏃</span>
                </h1>
-               <h2>I'm {info.position} and an avid <img src={manchester} style={myImageStyle} ></img> Fan</h2>
+               <h2>I'm {info.position} and an avid <img src={manchester} style={myImageStyle} ></img> fan</h2>
                <Box component={'ul'} p={'0.8rem'}>
                <EmojiBullet emoji={'⏰'} text={`The current time for me is: ${LosAngelesTime}`} />
                   {info.miniBio.map((bio, index) => (
