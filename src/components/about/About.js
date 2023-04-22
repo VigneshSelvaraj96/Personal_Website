@@ -45,7 +45,7 @@ export default function About() {
                     <Page pageNumber={pageNumber} renderTextLayer={false}/>
                 </Document>
                 <ThemeProvider theme={theme}>
-                <a href="USC Resume.pdf" download>
+                <a href={`${process.env.PUBLIC_URL}/USC Resume.pdf`} download>
                     <Box sx={{mt:3}}>
                         <Button variant="contained" color='myCustomBlue' startIcon={<DownloadSharpIcon />}>
                             Download
