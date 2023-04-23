@@ -8,7 +8,6 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css"
 import DownloadSharpIcon from '@mui/icons-material/DownloadSharp';
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import resume from './USC Resume.pdf';
 
 
 
@@ -40,7 +39,7 @@ export default function About() {
         return(
             <div className={Style.parentcontainer}>
                 <Document
-                    file={resume}
+                    file="./USC Resume.pdf"
                     onLoadSuccess={onDocumentLoadSuccess}
                 >
                     <Page pageNumber={pageNumber} renderTextLayer={false}/>
