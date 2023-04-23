@@ -8,6 +8,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css"
 import DownloadSharpIcon from '@mui/icons-material/DownloadSharp';
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import resume from './USC Resume.pdf';
 
 
 
@@ -39,13 +40,13 @@ export default function About() {
         return(
             <div className={Style.parentcontainer}>
                 <Document
-                    file="USC Resume.pdf"
+                    file={resume}
                     onLoadSuccess={onDocumentLoadSuccess}
                 >
                     <Page pageNumber={pageNumber} renderTextLayer={false}/>
                 </Document>
                 <ThemeProvider theme={theme}>
-                <a href={`${process.env.PUBLIC_URL}/USC Resume.pdf`} download>
+                <a href="USC Resume.pdf" download>
                     <Box sx={{mt:3}}>
                         <Button variant="contained" color='myCustomBlue' startIcon={<DownloadSharpIcon />}>
                             Download
