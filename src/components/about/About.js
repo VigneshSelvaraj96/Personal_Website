@@ -2,12 +2,14 @@ import React from 'react';
 import Style from './About.module.scss';
 import Terminal from "./Terminal";
 import {Box} from "@mui/material";
-import { Document, Page, pdfjs } from 'react-pdf';
+import { pdfjs } from 'react-pdf';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack'
 import { useState, useEffect } from 'react';
 import "react-pdf/dist/esm/Page/AnnotationLayer.css"
 import DownloadSharpIcon from '@mui/icons-material/DownloadSharp';
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import resume from './USC Resume.pdf';
 
 
 
@@ -39,8 +41,10 @@ export default function About() {
         return(
             <div className={Style.parentcontainer}>
                 <Document
-                    file="./USC Resume.pdf"
+                    file={resume}
                     onLoadSuccess={onDocumentLoadSuccess}
+                    onItemerror={(error) => console.log(error)}
+                    renderMode='svg'
                 >
                     <Page pageNumber={pageNumber} renderTextLayer={false}/>
                 </Document>
