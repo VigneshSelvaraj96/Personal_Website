@@ -10,7 +10,7 @@ import {BrowserRouter} from "react-router-dom";
 function App() {
    return (
       <div>
-         <BrowserRouter>
+         <BrowserRouter basename="Personal_Website">
             <BaseLayout/>
          </BrowserRouter>
       </div>
