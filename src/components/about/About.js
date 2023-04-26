@@ -44,12 +44,11 @@ export default function About() {
                     file={resume}
                     onLoadSuccess={onDocumentLoadSuccess}
                     onItemerror={(error) => console.log(error)}
-                    renderMode='svg'
                 >
                     <Page pageNumber={pageNumber} renderTextLayer={false}/>
                 </Document>
                 <ThemeProvider theme={theme}>
-                <a href="./USC Resume.pdf" download>
+                <a href={process.env.PUBLIC_URL + '/pdfs/USC Resume.pdf'} download>
                     <Box sx={{mt:3}}>
                         <Button variant="contained" color='myCustomBlue' startIcon={<DownloadSharpIcon />}>
                             Download

@@ -1,8 +1,12 @@
 {
-  "name": "portfolioTemplate",
+  "name": "Vignesh's_Personal_Website",
   "version": "2.0.0",
   "private": true,
   "homepage": "https://VigneshSelvaraj96.github.io/Personal_Website",
+  "files": [
+    "build",
+    "pdfs"
+  ],
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
