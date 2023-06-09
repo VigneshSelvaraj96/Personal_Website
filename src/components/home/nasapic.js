@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 
 function Nasapic() {
   const [nasaPic, setNasaPic] = useState({});
-  const apikey = 'OZs8Q8ae7ee8JWBBJv4CGHTvNeMFgsqlk7Vs4Sh1';
+  const apikey = 'jzWHEqVG8LO4UdOAP3yfGIFK58P1SZkiLBSIjC4m';
 
   useEffect(() => {
     fetch(`https://api.nasa.gov/planetary/apod?api_key=${apikey}`)

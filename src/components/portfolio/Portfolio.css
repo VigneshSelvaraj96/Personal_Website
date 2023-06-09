@@ -1,0 +1,29 @@
+
+/* a green border for the portfolio images with a green box shadow effect */
+.green-border {
+    border: 1px solid black;
+    box-shadow: 0 0 40px green;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+.link-button {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 4px;
+    
+  }
+  
+  .github-button:hover {
+    background-color: #555555;
+  }
