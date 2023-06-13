@@ -1,5 +1,5 @@
 import React from "react";
-import Yelpprojectslide from "./project";
+import Yelpprojectslide from "./yelpproject";
 
 
 export default function Portfolio() {

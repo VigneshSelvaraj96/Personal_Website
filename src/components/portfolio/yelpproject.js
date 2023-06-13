@@ -23,12 +23,17 @@ export default function Yelpprojectslide() {
                   Yelp API, Ipinfo API, Google Maps API, Google Cloud Platform
                 </p>
               </div>
-              <div className="col-lg-6 pt-2">
-                <img className='green-border' src={Yelpss} alt="YelpProjectSS">
-                </img>
+              <div className="col-lg-6 pt-2 imgcontainer">
+                <img className='yelp-border' src={Yelpss} alt="YelpProjectSS"></img>
+                <div class="middle">
+                  <div class="text">
+                    <a className = 'link-button'href="https://yelpcloneangular.wl.r.appspot.com/search" target="_blank" rel="noreferrer">Go to Website
+                    </a>
+                    </div>
                 </div>
+              </div>
             </div>
-            <div className="row d-flex justify-content-center pt-5">
+            <div className="row d-flex justify-content-center pt-2">
               <div className="col">
                 <h3>Project Description: </h3>
                 <p>

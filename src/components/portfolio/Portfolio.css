@@ -7,8 +7,45 @@
     border-radius: 15px;
 }
 
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  translate: 0 -100%;
+  border-radius: 15px;
+}
+
+.imgcontainer:hover .yelp-border {
+  opacity: 0.3;
+}
+
+.imgcontainer:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  text-align: center;
+}
+
 p{
     font-size: 1.3rem;
+}
+
+.yelp-border{
+    border: 1px solid black;
+    object-fit: contain;
+    border-radius: 15px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    opacity: 1;
+}
+
+.sceneborder{
+  border: 1px solid black;
+  object-fit: contain;
+  border-radius: 15px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  opacity: 1;
 }
 
 .link-button {
@@ -21,6 +58,7 @@ p{
     color: #ffffff;
     background-color: #333333;
     border-radius: 4px;
+    width: 100%;
     
   }
   
